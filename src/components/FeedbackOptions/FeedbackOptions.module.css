@@ -1,15 +1,16 @@
-.list {
+.btnBox {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: center;
+  column-gap: 5px;
 }
 
-.item {
+/* .btnBox {
   margin: 0 10px;
-}
+} */
 
-.button {
+.btn {
   background-color: blueviolet;
   border: none;
   color: white;
@@ -19,13 +20,12 @@
   display: inline-block;
   font-size: 20px;
   cursor: pointer;
-
+  border-radius: 4px;
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
   /* text-transform: capitalize; */
 }
-
-.button:hover,
-.button:focus {
+.btn:hover,
+.btn:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.342);
   background-color: plum;
 }

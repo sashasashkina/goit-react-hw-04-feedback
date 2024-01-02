@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Statistics from '../Statistics/Statistics';
 import Section from '../Section/Section';
-import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
+import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
 import Notification from '../Notification/Notification';
 import css from './App.module.css';
 
@@ -12,8 +12,12 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleFeedback = type => {
-    this.setState(prev => ({ [type]: prev[type] + 1 }));
+  leaveFeedback = name => {
+    this.setState(lastState => {
+      return {
+        [name]: lastState[name] + 1,
+      };
+    });
   };
 
   countTotalFeedback = () => {
