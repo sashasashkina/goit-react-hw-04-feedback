@@ -12,7 +12,7 @@ export class App extends Component {
     bad: 0,
   };
 
-  leaveFeedback = name => {
+  onLeaveFeedback = name => {
     this.setState(lastState => {
       return {
         [name]: lastState[name] + 1,
@@ -41,7 +41,7 @@ export class App extends Component {
       <div className={css.box}>
         <Section title="Please leave Feedback">
           <FeedbackOptions
-            handleFeedback={this.handleFeedback}
+            onLeaveFeedback={this.onLeaveFeedback}
             options={options}
           />
         </Section>
